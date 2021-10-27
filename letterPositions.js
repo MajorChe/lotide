@@ -27,9 +27,21 @@ console.log(countLetters("lighthouse in the house "));
 
 const letterPositions = function(sentence) {
   const results = {};
-  sentenceArray = sentence.slice("");
-  for (let index in sentenceArray){
-    results[sentenceArray[index]] = index;
+  sentenceArray = sentence.split("");
+  const findIndex = function(letter, str) {
+    let result = [];
+    let indexLetter = str.indexOf(letter);
+    while (indexLetter != -1) {
+        result.push(indexLetter);
+        indexLetter = str.indexOf(letter, indexLetter + 1);
+    }
+    return result;
+}
+  for (let index = 0; index < sentenceArray.length; index++){
+    if(sentenceArray[index] !== ' '){
+      results[sentenceArray[index]] = findIndex(sentence[index],sentenceArray)
+    }
   }
   return results;
 };
+console.log(letterPositions("lighthouse in the house "));
