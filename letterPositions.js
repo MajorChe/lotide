@@ -27,6 +27,9 @@ console.log(countLetters("lighthouse in the house "));
 
 const letterPositions = function(sentence) {
   const results = {};
-  // logic to update results here
+  sentenceArray = sentence.slice("");
+  for (let index in sentenceArray){
+    results[sentenceArray[index]] = index;
+  }
   return results;
 };
