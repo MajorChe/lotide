@@ -24,7 +24,7 @@ const assertArraysEqual = function (actualArray,expectedArray){
     console.log(`🛑🛑🛑 Assertion Failed: ${actualArray} !== ${expectedArray}`);
   }
 };
-// map function actual;ly starts
+// map function actually starts
 
 const words = ["ground", "control", "to", "major", "tom"];
 const map = function(array,callback) {
@@ -37,3 +37,5 @@ const map = function(array,callback) {
 const results1 = map(words, word => word[0]);
 
 console.log(results1);
+
+console.log(assertArraysEqual(['g','c','t','m','t'],results1));
