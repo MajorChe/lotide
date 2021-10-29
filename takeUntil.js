@@ -39,13 +39,15 @@ const takeUntil = function(array,callback){
   return result;
 }
 
-const array1 = [4,74,23,-1,0,10,2,4,5];
-const result1 = takeUntil(array1,x => x < 0);
-console.log(result1);
-console.log(assertArraysEqual(result1,[4,74,23]));
+//Test cases added
 
-console.log('---');
+// const array1 = [4,74,23,-1,0,10,2,4,5];
+// const result1 = takeUntil(array1,x => x < 0);
+// console.log(result1);
+// console.log(assertArraysEqual(result1,[4,74,23]));
 
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-console.log(results2);
+// console.log('---');
+
+// const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+// const results2 = takeUntil(data2, x => x === ',');
+// console.log(results2);
