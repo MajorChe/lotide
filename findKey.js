@@ -1,9 +1,5 @@
 const assertEqual = require('./assertEqual');
 
-// TEST CODE
-// assertEqual("Lighthouse Labs", "Lighthouse Labs");
-// assertEqual(1, 3);
-
 const findKey = function(object,callback){
   let result = [];
   for (let item in object){
