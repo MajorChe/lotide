@@ -1,9 +1,9 @@
 const assertEqual = require('./assertEqual');
 
-const findKey = function(object,callback){
+const findKey = function(object,callback) {
   let result = [];
-  for (let item in object){
-    if(callback(object[item])) {
+  for (let item in object) {
+    if (callback(object[item])) {
       result.push(item);
     }
   }

@@ -1,6 +1,6 @@
 const assertEqual = require('./assertEqual');
 
-const eqArrays = require('./eqArrays')
+const eqArrays = require('./eqArrays');
 
 const eqObjects = function(object1,object2) {
   let output = [];
@@ -20,8 +20,7 @@ const eqObjects = function(object1,object2) {
             if (newReturn === false) {
               output.push(false);
             }
-          }
-          else {
+          } else {
             if (object1[itemTwo] !== object2[itemTwo]) {
               output.push(false);
             }
