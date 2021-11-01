@@ -1,29 +1,6 @@
-const eqArrays = function(arr1,arr2) {
-  let output = [];
-  if (arr1.length !== arr2.length) {
-    output.push(false);
-  } else {
-    for (let val in arr1) {
-      if (arr1[val] !== arr2[val]) {
-        output.push(false);
-      }
-    }
-  }
-  if (output.length !== 0) {
-    return false;
-  } else {
-    return true;
-  }
-};
+const eqArrays = require('./eqArrays')
 
-const assertArraysEqual = function (actualArray,expectedArray){
-  let check = eqArrays(actualArray,expectedArray);
-  if (check === true) {
-    console.log(`✅✅✅  Assertion Passed: ${actualArray} === ${expectedArray}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actualArray} !== ${expectedArray}`);
-  }
-};
+const assertArraysEqual = require('./assertEqual');
 // map function actually starts
 
 const words = ["ground", "control", "to", "major", "tom"];
@@ -33,9 +10,13 @@ const map = function(array,callback) {
     results.push(callback(item))
   }
   return results;
-}
-const results1 = map(words, word => word[0]);
+};
 
-console.log(results1);
+module.exports = map;
+// Test Code
 
-console.log(assertArraysEqual(['g','c','t','m','t'],results1));
+// const results1 = map(words, word => word[0]);
+
+// console.log(results1);
+
+// console.log(assertArraysEqual(['g','c','t','m','t'],results1));

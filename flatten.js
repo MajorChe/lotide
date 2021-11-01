@@ -10,6 +10,8 @@ const flatten = function(arr){
     }
   }
   return output
-}
+};
 
-console.log(flatten([1, 'k', [3, 4], 5, [6]]));
+module.exports = flatten;
+
+//console.log(flatten([1, 'k', [3, 4], 5, [6]]));
